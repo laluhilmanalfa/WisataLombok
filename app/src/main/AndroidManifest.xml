@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hilman.wisatalombok" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/wisatalombok"
+        android:label="Wisata Lombok"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".splash"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+        </activity>
+        <activity
+            android:name=".HOME"
+            android:label="@string/title_activity_home"
+             >
+
+        </activity>
+        <activity
+            android:name=".Boking"
+            android:label="@string/title_activity_boking"
+            android:parentActivityName=".HOME" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.hilman.wisatalombok.HOME" />
+        </activity>
+        <activity
+            android:name=".PaketWisata"
+            android:label="@string/title_activity_paket_wisata"
+            android:parentActivityName=".HOME" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.hilman.wisatalombok.HOME" />
+
+        </activity>
+        <activity
+            android:name=".InformasiPembayaran"
+            android:label="@string/title_activity_informasi_pembayaran" >
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.hilman.wisatalombok.HOME" />
+
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:parentActivityName=".PaketWisata" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.hilman.wisatalombok.PaketWisata" />
+        </activity>
+        <activity
+            android:name=".DetailPaket"
+            android:label="@string/title_activity_detail_paket"
+            android:parentActivityName=".PaketWisata" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.hilman.wisatalombok.PaketWisata" />
+        </activity>
+        <activity
+            android:name=".gambar"
+            android:label="@string/title_activity_gambar" >
+        </activity>
+        <activity
+            android:name=".artikel"
+            android:label="@string/title_activity_artikel" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.hilman.wisatalombok.daftarartikel" />
+
+        </activity>
+        <activity
+            android:name=".daftarartikel"
+            android:label="@string/title_activity_daftarartikel" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.hilman.wisatalombok.HOME" />
+
+        </activity>
+        <activity
+            android:name=".listArtikel"
+            android:label="Daftar Artikel" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.hilman.wisatalombok.HOME" />
+
+
+        </activity>
+
+    </application>
+
+</manifest>

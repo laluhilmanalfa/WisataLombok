@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/label"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+
+                android:text="ITENERARI PERJALAN WISATA"
+                android:paddingTop="5dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingBottom="3dp"
+                android:layout_centerHorizontal="true"
+                android:background="#33691E"
+                android:layout_marginBottom="14dp"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:id="@+id/labelHari1"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:layout_below="@id/label"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textStyle="bold"
+                android:textSize="20dp"
+
+                />
+            <TextView
+                android:id="@+id/hari1"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:layout_below="@id/labelHari1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="TES BRO"
+
+                />
+            <TextView
+                android:id="@+id/labelHari2"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:layout_below="@id/hari1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                />
+            <TextView
+                android:id="@+id/hari2"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:layout_below="@id/labelHari2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="TES BRO"
+
+                />
+
+
+            <Button
+                android:id="@+id/booknow"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="BOOK NOW"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:layout_below="@id/hari2"
+                android:layout_centerHorizontal="true"
+                android:background="#33691E"
+                android:layout_marginBottom="14dp"
+                android:textColor="#fff"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

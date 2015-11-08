@@ -1,0 +1,39 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hilman.wisatalombok.DetailPaket$PlaceholderFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/infoRuanganFoto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <ImageView
+        android:id="@+id/infoRuanganFoto1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/infoRuanganFoto"
+        />
+    <Button
+        android:id="@+id/ButtonOK"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="BOOK NOW"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:layout_below="@id/infoRuanganFoto1"
+        android:layout_centerHorizontal="true"
+        android:background="#33691E"
+        android:layout_marginBottom="14dp"
+        android:onClick="ok"
+        android:textColor="#fff"/>
+    </RelativeLayout>
+</ScrollView>
+

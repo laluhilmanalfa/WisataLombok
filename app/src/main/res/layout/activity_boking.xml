@@ -1,0 +1,382 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hilman.wisatalombok.Boking">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout    android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <Button
+                android:id="@+id/ButtonLabel"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Silahkan Isi Formulir Pemesanan Wisata"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+
+                android:layout_centerHorizontal="true"
+                android:background="#33691E"
+                android:layout_marginBottom="14dp"
+                android:onClick="ok"
+                android:textColor="#fff"/>
+
+
+            <TextView
+                android:id="@+id/INFO"
+                android:layout_width="match_parent"
+                android:layout_below="@id/ButtonLabel"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                 />
+
+            <EditText
+                android:id="@+id/Nama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:layout_below="@+id/INFO"
+                android:drawableLeft="@drawable/ic_action"
+                android:hint="Masukan Nama Anda" />
+
+            <EditText
+                android:id="@+id/Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:layout_below="@+id/Nama"
+                android:onClick="eror"
+                android:drawableLeft="@drawable/ic_action_email"
+                android:inputType="textEmailAddress"
+                android:hint="Masukan Email Anda" />
+
+            <EditText
+                android:id="@+id/Handphone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:layout_below="@+id/Email"
+
+                android:maxLength="12"
+                android:inputType="phone"
+                android:drawableLeft="@drawable/ic_action_hp"
+                android:hint="Masukan No Hanphone Anda" />
+
+
+            <TextView
+                android:id="@+id/PilihPaketWisataLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:layout_below="@+id/Handphone"
+                android:layout_marginBottom="7dp"
+                android:imeOptions="actionDone"
+                android:textStyle="bold"
+                android:drawableLeft="@drawable/ic_action_pemandangan"
+                android:text="Pilih Paket Wisata"/>
+
+            <Spinner
+                android:id="@+id/SpinnerPaketWisata"
+                android:layout_width="match_parent"
+
+                android:layout_below="@id/PilihPaketWisataLabel"
+                android:layout_marginBottom="7dp"
+                android:paddingLeft="15dp"
+                android:layout_height="wrap_content"></Spinner>
+
+           <!-- <TextView
+                android:id="@+id/JumlahPesertaLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/SpinnerPaketWisata"
+                android:textSize="16dp"
+                android:layout_marginBottom="7dp"
+                android:text="Jumlah Peserta:"/>
+-->
+            <EditText
+                android:id="@+id/JumlahPeserta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:inputType="number"
+                android:drawableLeft="@drawable/ic_action_banyak_orang"
+                android:layout_below="@+id/SpinnerPaketWisata"
+                android:hint="Jumlah Peserta" />
+
+
+         <!--   <ToggleButton
+                android:id="@+id/togglebutton"
+                android:layout_below="@id/JumlahPeserta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOn="HOTEL"
+                android:textOff="TANPA HOTEL"
+                android:onClick="onToggleClicked"/>-->
+
+
+            <RadioGroup
+                android:id="@+id/radioHotellabel"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/JumlahPeserta"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/radioHotel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HOTEL"
+                    android:onClick="setHotel"
+
+                    android:checked="true"
+                    />
+
+                <RadioButton
+                    android:id="@+id/radioNonHotel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="setNonHotel"
+                    android:text="NON HOTEL"
+                />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/PilihHotelLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/radioHotellabel"
+                android:textSize="16dp"
+                android:paddingLeft="15dp"
+                android:drawableLeft="@drawable/ic_action_hotel"
+
+                android:layout_marginBottom="7dp"
+
+                android:text="Silahkan Pilih Hotel"/>
+
+
+            <Spinner
+                android:id="@+id/SpinnerPilihHotel"
+                android:layout_width="match_parent"
+                android:layout_below="@id/PilihHotelLabel"
+                android:layout_marginBottom="7dp"
+                android:paddingLeft="15dp"
+                android:layout_height="wrap_content"></Spinner>
+
+            <TextView
+                android:id="@+id/PilihKelasHotelLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/SpinnerPilihHotel"
+                android:paddingLeft="15dp"
+                android:textSize="16dp"
+                android:drawableLeft="@drawable/ic_action_brand"
+                android:layout_marginBottom="7dp"
+                android:text="Silahkan Pilih Kelas Hotel"/>
+
+            <Spinner
+                android:id="@+id/SpinnerKelasHotel"
+                android:layout_width="match_parent"
+                android:layout_below="@id/PilihKelasHotelLabel"
+                android:layout_marginBottom="7dp"
+                android:paddingLeft="15dp"
+                android:layout_height="wrap_content"></Spinner>
+
+
+
+
+
+            <RadioGroup
+                android:id="@+id/tambahRanjangLabel"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/SpinnerKelasHotel"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/tamhahRanjang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tambah Ranjang"
+
+
+                    android:onClick="setRanjang"
+                    android:checked="true"
+                    />
+
+                <RadioButton
+                    android:id="@+id/tanpaTambahRanjang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="setNonRanjang"
+                    android:text="Tanpa Tambah Ranjang"
+                  />
+
+            </RadioGroup>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/jumlahTambahRanjang"
+            android:layout_weight=".5"
+            android:layout_below="@id/tambahRanjangLabel"
+            android:drawableLeft="@drawable/ic_action_ranjang"
+            android:inputType="number"
+
+            android:hint="jumlah ranjang tambahan"
+            />
+
+
+            <RadioGroup
+                android:id="@+id/radioDinerLabel"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/jumlahTambahRanjang"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/radioDiner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="DINNER"
+                     />
+
+                <RadioButton
+                    android:id="@+id/radioNonDiner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NON DINNER" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/tanggal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:drawableLeft="@drawable/ic_action_tanggal"
+                android:layout_below="@id/radioDinerLabel"
+                android:hint="Tanggal Acara ex. 23-01-2015" />
+
+            <EditText
+                android:id="@+id/pesan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:layout_below="@+id/tanggal"
+                android:drawableLeft="@drawable/ic_action_comment"
+                android:hint="Masukan pesan anda untuk kami." />
+
+
+            <Button
+                android:id="@+id/ButtonOK"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="BOOK NOW"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:layout_below="@id/pesan"
+                android:layout_centerHorizontal="true"
+                android:background="#33691E"
+                android:layout_marginBottom="14dp"
+                android:onClick="ok"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:id="@+id/perpax"
+                android:layout_below="@id/ButtonOK"
+                android:layout_alignParentLeft="true"
+                android:textColor="#ffffff"
+                android:background="#33691E"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_below="@id/perpax"
+                android:layout_width="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textColor="#ffffff"
+                android:background="#33691E"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/lunch"
+                android:layout_below="@id/total"
+                android:layout_width="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textColor="#ffffff"
+                android:background="#33691E"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/dinner"
+                android:layout_below="@id/lunch"
+                android:layout_alignParentLeft="true"
+                android:textColor="#ffffff"
+                android:background="#33691E"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/transport"
+                android:gravity="right"
+                android:layout_below="@id/dinner"
+                android:layout_alignParentLeft="true"
+                android:textColor="#ffffff"
+                android:background="#33691E"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/other"
+                android:gravity="right"
+                android:layout_below="@id/transport"
+                android:layout_alignParentLeft="true"
+                android:textColor="#ffffff"
+                android:background="#33691E"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/hotel"
+                android:gravity="right"
+                android:layout_below="@id/other"
+                android:layout_alignParentLeft="true"
+                android:textColor="#ffffff"
+                android:background="#33691E"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/kirim"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Kirim"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:layout_below="@id/hotel"
+                android:layout_centerHorizontal="true"
+                android:background="#33691E"
+                android:layout_marginBottom="14dp"
+                android:onClick="openDialog"
+                android:textColor="#fff"/>
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

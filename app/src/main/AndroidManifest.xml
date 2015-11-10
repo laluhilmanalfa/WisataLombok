@@ -13,7 +13,7 @@
         android:label="Wisata Lombok"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".splash"
+            android:name=".activity.splash"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,59 +24,47 @@
 
         </activity>
         <activity
-            android:name=".HOME"
+            android:name=".activity.HOME"
             android:label="@string/title_activity_home"
              >
 
         </activity>
         <activity
-            android:name=".Boking"
+            android:name=".activity.Boking"
             android:label="@string/title_activity_boking"
-            android:parentActivityName=".HOME" >
+            android:parentActivityName=".activity.HOME" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.hilman.wisatalombok.HOME" />
+                android:value=".activity.HOME" />
         </activity>
         <activity
-            android:name=".PaketWisata"
+            android:name=".activity.PaketWisata"
             android:label="@string/title_activity_paket_wisata"
-            android:parentActivityName=".HOME" >
+            android:parentActivityName=".activity.HOME" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.hilman.wisatalombok.HOME" />
+                android:value=".activity.HOME" />
 
         </activity>
         <activity
-            android:name=".InformasiPembayaran"
+            android:name=".activity.InformasiPembayaran"
             android:label="@string/title_activity_informasi_pembayaran" >
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.hilman.wisatalombok.HOME" />
+                android:value=".activity.HOME" />
 
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:label="@string/title_activity_main"
-            android:parentActivityName=".PaketWisata" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.hilman.wisatalombok.PaketWisata" />
-        </activity>
-        <activity
-            android:name=".DetailPaket"
+            android:name=".activity.DetailPaket"
             android:label="@string/title_activity_detail_paket"
-            android:parentActivityName=".PaketWisata" >
+            android:parentActivityName=".activity.PaketWisata" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.hilman.wisatalombok.PaketWisata" />
+                android:value=".activity.PaketWisata" />
         </activity>
         <activity
-            android:name=".gambar"
-            android:label="@string/title_activity_gambar" >
-        </activity>
-        <activity
-            android:name=".artikel"
+            android:name=".activity.artikel"
             android:label="@string/title_activity_artikel" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -84,19 +72,11 @@
 
         </activity>
         <activity
-            android:name=".daftarartikel"
-            android:label="@string/title_activity_daftarartikel" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.hilman.wisatalombok.HOME" />
-
-        </activity>
-        <activity
-            android:name=".listArtikel"
+            android:name=".activity.listArtikel"
             android:label="Daftar Artikel" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.hilman.wisatalombok.HOME" />
+                android:value=".activity.HOME" />
 
 
         </activity>
